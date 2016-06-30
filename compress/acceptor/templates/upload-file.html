@@ -1,0 +1,15 @@
+<html>
+<head>
+    {{ form.media }}
+</head>
+<body>
+    <h1>Upload a File</h1>
+<p>Upload a text/xls/csv file with URLs of images or an actual image file</p>
+<br> 
+    <form enctype="multipart/form-data" method="post" action="{% url 'upload-file-url' %}">
+    	{% csrf_token %}
+    	{{ form.as_p }}
+     	<input type="submit" value="Upload" id="Save"/>
+	</form>
+</body>
+</html>
